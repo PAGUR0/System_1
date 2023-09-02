@@ -8,28 +8,24 @@ public class System_2 {
         int[] numbers = new int[2];
         Random random = new Random();
 
-        for(int i = 0;i < numbers.length;i++){
-            numbers[0] = 2;
-            numbers[1] = 21;
-            //numbers[i] = random.nextInt(10000);
-        }
-
         int min = numbers[0];
         int min_3 = numbers[0];
         int min_7 = numbers[0];
         int min_21 = numbers[0];
-        for (int number : numbers) {
-            if (number < min) {
-                min = number;
+
+        for(int i = 0;i < numbers.length;i++){
+            numbers[i] = random.nextInt(10000);
+            if (numbers[i] < min) {
+                min = numbers[i];
             }
-            else if ((number % 3 == 0) && (number < min_3)) {
-                min_3 = number;
+            else if (numbers[](numbers[i] % 2 == 0) && (numbers[i] < min_3)) {
+                min_3 = numbers[i];
             }
-            else if ((number % 7 == 0) && (number < min_7)) {
-                min_7 = number;
+            else if ((numbers[i] % 7 == 0) && (numbers[i] < min_7)) {
+                min_7 = numbers[i];
             }
-            else if ((number % 21 == 0) && (number < min_21)) {
-                min_21 = number;
+            else if ((numbers[i] % 14 == 0) && (numbers[i] < min_21)) {
+                min_21 = numbers[i];
             }
         }
         int product_min = min * min_21;
