@@ -8,23 +8,23 @@ public class System_1 {
 	    int[] numbers = new int[1000];
         Random random = new Random();
 
-        int max = numbers[0];
-        int max_2 = numbers[0];
-        int max_7 = numbers[0];
-        int max_14 = numbers[0];
+        int max = 0;
+        int max_2 = 0;
+        int max_7 = 0;
+        int max_14 = 0;
 
 	    for(int i = 0;i < numbers.length;i++){
 	        numbers[i] = random.nextInt(10000);
             if (numbers[i] > max) {
                 max = numbers[i];
             }
-            else if ((numbers[i] % 2 == 0) && (numbers[i] > max_2)) {
+            if ((numbers[i] % 2 == 0) && (numbers[i] > max_2)) {
                 max_2 = numbers[i];
             }
-            else if ((numbers[i] % 7 == 0) && (numbers[i] > max_7)) {
+            if ((numbers[i] % 7 == 0) && (numbers[i] > max_7)) {
                 max_7 = numbers[i];
             }
-            else if ((numbers[i] % 14 == 0) && (numbers[i] > max_14)) {
+            if ((numbers[i] % 14 == 0) && (numbers[i] > max_14)) {
                 max_14 = numbers[i];
             }
         }
