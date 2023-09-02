@@ -32,11 +32,17 @@ public class System_2 {
         int product_min = 0;
         int product_min_2 = 0;
 
-        if(min == 10001 && min_21 == 10001){
+        System.out.println(min);
+        System.out.println(min_3);
+        System.out.println(min_7);
+        System.out.println(min_21);
+
+
+        if(min != 10001 && min_21 != 10001){
             product_min = min * min_21;
         }
 
-        if(min_3 == 10001 && min_7 == 10001){
+        if(min_3 != 10001 && min_7 != 10001){
             product_min_2 = min_3 * min_7;
         }
 
