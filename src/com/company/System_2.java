@@ -5,34 +5,36 @@ import java.util.Random;
 public class System_2 {
 
     public static void main(String[] args) {
-        int[] numbers = new int[1000];
+        int[] numbers = new int[2];
         Random random = new Random();
 
         for(int i = 0;i < numbers.length;i++){
-            numbers[i] = random.nextInt(10000);
+            numbers[0] = 2;
+            numbers[1] = 21;
+            //numbers[i] = random.nextInt(10000);
         }
 
-        int min = 0;
-        int min_3 = 0;
-        int min_7 = 0;
-        int min_21 = 0;
+        int min = numbers[0];
+        int min_3 = numbers[0];
+        int min_7 = numbers[0];
+        int min_21 = numbers[0];
         for (int number : numbers) {
-            if (number > min) {
+            if (number < min) {
                 min = number;
             }
-            else if ((number % 3 == 0) && (number > min_3)) {
+            else if ((number % 3 == 0) && (number < min_3)) {
                 min_3 = number;
             }
-            else if ((number % 7 == 0) && (number > min_7)) {
+            else if ((number % 7 == 0) && (number < min_7)) {
                 min_7 = number;
             }
-            else if ((number % 21 == 0) && (number > min_21)) {
+            else if ((number % 21 == 0) && (number < min_21)) {
                 min_21 = number;
             }
         }
         int product_min = min * min_21;
         int product_min_2 = min_3 * min_7;
-        if (product_min * product_min_2 == 0){
+        if (product_min == 0 && product_min_2 == 0){
             System.out.println(-1);
         }
         else{
