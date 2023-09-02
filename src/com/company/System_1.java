@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Random;
 
-public class Main {
+public class System_1 {
 
     public static void main(String[] args) {
 	    int[] numbers = new int[1000];
